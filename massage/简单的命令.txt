@@ -1,0 +1,35 @@
+命令 
+
+npm install gulp gulp-uglify gulp-clean-css gulp-imagemin gulp-livereload gulp-concat gulp-rename gulp-jshint gulp-htmlmin --save-dev
+
+cd  路径
+cd.. 跳出当前目录
+cd\  回到磁盘根目录
+
+c: 切换到c盘
+d: 切换到d盘
+
+dir  列出目录
+md  创建目录
+cd   进入目录
+rd   删除目录
+
+gulp操作流程
+1.npm install gulp -g
+
+环境中
+2.创建package.json
+  gulp init
+3.局部安装gulp
+  npm install gulp --save-dev
+4.创建gulpfile.js  gulp配置文件
+5.在gulpfile.js中
+var gulp=require("gulp");//加载gulp模块
+//添加监听任务
+gulp.task("watch",function(){
+    gulp.watch("(文件路径)",["执行任务"]);//监听对应文件路径,当文件发生变化时执行
+})
+//执行默认任务
+gulp.task("default",[(执行任务)],function(){
+  console.log("执行完毕,请查看文件夹")
+})
